@@ -7,28 +7,6 @@ var BlankPlugin = function (owner) {
     /* USER MODIFIABLE BEGIN */
     // Place your code between these lines
 
-    // This example creates an empty DSP module plugin
-    var node = this.context.createScriptProcessor(1024, 2, 2);
-    var i = 0;
-
-    // First, create the gain parameter;
-    var gainParam = new PluginParameter(1, "Number", "Volume", 0, 2);
-    _parameters.push(gainParam);
-
-    node.onaudioprocess = function (event) {
-        // Place your custom, JS here.
-        var gain = gainParam.value;
-        for (var c = 0; c < event.inputBuffer.numberOfChannels; c++) {
-            var inputArray = event.inputBuffer.getChannelData(c);
-            var outputArray = event.outputBuffer.getChannelData(c);
-            for (var n = 0; n < inputArray.length; n++) {
-                outputArray[n] = inputArray[n] * gain;
-            }
-        }
-    }
-
-    _inputList[0] = node;
-    _outputList[0] = node;
     /* USER MODIFIABLE END */
     (function () {
         var i;
@@ -114,5 +92,4 @@ var BlankPlugin = function (owner) {
 }
 
 BlankPlugin.prototype = new BasePlugin(context);
-BlankPlugin.prototype.name = "BlankPluginScript";
 BlankPlugin.prototype.constructor = BlankPlugin;

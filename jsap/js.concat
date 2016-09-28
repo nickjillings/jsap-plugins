@@ -1,7 +1,0 @@
-concatOnSave = true;
-output = jsap.js;
-minify = false;
-
--src/head.js;
--src/base_plugin.js;
--src/plugin-factory.js;
