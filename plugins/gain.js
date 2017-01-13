@@ -27,7 +27,7 @@ var GainPlugin = function (factory, owner) {
     // This defines a new parameter. The arguments passed are, in order:
     // Data Type, Name, Default value, minimum and maximum values
     // Parameters are exposed by default
-    var gain_parameter = this.parameters.createParameter("Number", "gain", 0, -12, 12)
+    var gain_parameter = this.parameters.createParameter("Number", "gain", 0, -12, 12);
 
     // Attaching some number conversions on the parameter to shift between dB and linear gains
     gain_parameter.translate = function (e) {
