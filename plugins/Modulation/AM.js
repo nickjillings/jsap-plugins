@@ -27,7 +27,7 @@ var AmplitudeModulation = function (factory, owner) {
     inputNode.connect(mixer);
     mixer.connect(outputNode);
 
-    var LFO = new PluginParameter(this, "Number", "LFO", 1, 0.1, 10);
+    var LFO = this.parameters.createParameter("Number", "LFO", 1, 0.1, 10);
 
     LFO.bindToAudioParam(oscil.frequency);
     oscil.start();

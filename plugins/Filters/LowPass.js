@@ -21,7 +21,7 @@ var LPF = function (factory, owner) {
     inputNode.connect(filter);
     filter.connect(outputNode);
 
-    var frequency = new PluginParameter(this, "Number", "frequency", 1000, 300, 20000);
+    var frequency = this.parameters.createParameter("Number", "frequency", 1000, 300, 20000);
 
     frequency.bindToAudioParam(filter.frequency);
 

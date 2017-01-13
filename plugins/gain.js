@@ -25,8 +25,9 @@ var GainPlugin = function (factory, owner) {
     var node = this.context.createGain();
 
     // This defines a new parameter. The arguments passed are, in order:
-    // Owning Object, Data Type, Name, Default value, minimum and maximum values
-    var gain_parameter = new PluginParameter(this, "Number", "gain", 0, -12, 12);
+    // Data Type, Name, Default value, minimum and maximum values
+    // Parameters are exposed by default
+    var gain_parameter = this.parameters.createParameter("Number", "gain", 0, -12, 12)
 
     // Attaching some number conversions on the parameter to shift between dB and linear gains
     gain_parameter.translate = function (e) {
@@ -39,8 +40,6 @@ var GainPlugin = function (factory, owner) {
     // Binding the parameter to the Web Audio API gain nodes' gain parameter
     gain_parameter.bindToAudioParam(node.gain);
 
-    // Add the parameter to the plugin parameter list
-    this.parameters.push(gain_parameter);
     // Set the gain node as the input point. All connections to the plugin are made
     // to this node.
     this.addInput(node);
