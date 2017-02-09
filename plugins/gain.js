@@ -51,3 +51,5 @@ var GainPlugin = function (factory, owner) {
 
 // Also update the prototype function here!
 GainPlugin.prototype.name = "Gain";
+GainPlugin.prototype.version = "1.0.0";
+GainPlugin.prototype.uniqueID = "JSGN";

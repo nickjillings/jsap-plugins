@@ -31,3 +31,5 @@ var LPF = function (factory, owner) {
 
 // Also update the prototype function here!
 LPF.prototype.name = "LPF";
+LPF.prototype.version = "1.0.0";
+LPF.prototype.uniqueID = "JSLP";

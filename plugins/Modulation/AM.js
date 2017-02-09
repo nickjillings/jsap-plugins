@@ -38,3 +38,5 @@ var AmplitudeModulation = function (factory, owner) {
 
 // Also update the prototype function here!
 AmplitudeModulation.prototype.name = "Amplitude Modulation";
+AmplitudeModulation.prototype.version = "1.0.0";
+AmplitudeModulation.prototype.uniqueID = "JSAM";

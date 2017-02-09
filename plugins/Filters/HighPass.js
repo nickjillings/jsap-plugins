@@ -33,3 +33,5 @@ var HPF = function (factory, owner) {
 
 // Also update the prototype function here!
 HPF.prototype.name = "HPF";
+HPF.prototype.version = "1.0.0";
+HPF.prototype.uniqueID = "JSHP";
