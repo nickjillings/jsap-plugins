@@ -5,8 +5,5 @@
     "version": "0.0.1",
     "devDependencies": {
         "jshint": "^2.6.0"
-    },
-    "scripts": {
-        "test": "npm test"
     }
 }
