@@ -1,0 +1,9 @@
+{
+    "plugins:" [
+        "gain.js",
+        "Adaptive/SpectralWah.js",
+        "Filters/LowPass.js",
+        "Filters/HighPass.js",
+        "Modulation/AM.js"
+    ]
+}
