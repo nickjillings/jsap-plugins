@@ -1,3 +1,4 @@
+/*globals BasePlugin */
 /*
     SpectralWah
     An adaptive Wah-Wah effect
@@ -40,18 +41,17 @@ var SpectralWah = function (factory, owner) {
                     "name": "spectral_centroid"
             }]
         }]
-        }
-        console.log(plugin_index);
-        if (plugin_index == 0) {
+        };
+        if (plugin_index === 0) {
             this.featureMap.Receiver.requestFeaturesFromPlugin(this.owner.featureSender, request);
         } else {
             this.featureMap.Receiver.requestFeaturesFromPlugin(this.owner.getPlugins()[plugin_index - 1], request);
         }
-    }
+    };
 
     this.onunloaded = function () {
         this.featureMap.Receiver.cancelAllFeatures();
-    }
+    };
 
     // Create the function for the callback and setting the filter:
     function updateFrequency(f) {
@@ -76,7 +76,7 @@ var SpectralWah = function (factory, owner) {
         var spectral_centroid = channelresults[0].spectrum.spectral_centroid;
         // Now some processing
         updateFrequency(Number(spectral_centroid));
-    }
+    };
 
     // Set the gain node as the input point. All connections to the plugin are made
     // to this node.
@@ -85,7 +85,7 @@ var SpectralWah = function (factory, owner) {
     // made from this node
     this.addOutput(output);
     /* USER MODIFIABLE END */
-}
+};
 
 // Also update the prototype function here!
 SpectralWah.prototype = Object.create(BasePlugin.prototype);

@@ -1,3 +1,4 @@
+/*globals BasePlugin */
 /*
     Amplitude Modulation
 */
@@ -30,7 +31,7 @@ var AmplitudeModulation = function (factory, owner) {
 
     this.addInput(inputNode);
     this.addOutput(outputNode);
-}
+};
 
 // Also update the prototype function here!
 AmplitudeModulation.prototype = Object.create(BasePlugin.prototype);

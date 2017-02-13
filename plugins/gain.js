@@ -1,3 +1,4 @@
+/*globals BasePlugin */
 /*
     HelloWorld Gain
     This is a simple gain node with only one input and output block and one parameter
@@ -28,10 +29,10 @@ var GainPlugin = function (factory, owner) {
     // Attaching some number conversions on the parameter to shift between dB and linear gains
     gain_parameter.translate = function (e) {
         return 20.0 * Math.log10(e);
-    }
+    };
     gain_parameter.update = function (e) {
         return Math.pow(10, e / 20.0);
-    }
+    };
 
     // Binding the parameter to the Web Audio API gain nodes' gain parameter
     gain_parameter.bindToAudioParam(node.gain);
@@ -43,7 +44,7 @@ var GainPlugin = function (factory, owner) {
     // made from this node
     this.addOutput(node);
     /* USER MODIFIABLE END */
-}
+};
 
 // Also update the prototype function here!
 GainPlugin.prototype = Object.create(BasePlugin.prototype);

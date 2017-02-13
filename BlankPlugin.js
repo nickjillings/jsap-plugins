@@ -1,3 +1,4 @@
+/*globals BasePlugin */
 var BlankPlugin = function (factory, owner) {
     // This attaches the base plugin items to the Object
     BasePlugin.call(this, factory, owner);
@@ -20,7 +21,7 @@ var BlankPlugin = function (factory, owner) {
             this.outputs[i].connect(node);
         }
     })();
-}
+};
 
 // Also update the prototype function here!
 BlankPlugin.prototype = Object.create(BasePlugin.prototype);

@@ -1,3 +1,4 @@
+/*globals BasePlugin */
 /*
     HPF
     A 2nd order biquad high pass filter
@@ -25,7 +26,7 @@ var HPF = function (factory, owner) {
 
     this.addInput(inputNode);
     this.addOutput(outputNode);
-}
+};
 
 // Also update the prototype function here!
 HPF.prototype = Object.create(BasePlugin.prototype);

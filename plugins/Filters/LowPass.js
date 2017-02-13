@@ -1,3 +1,4 @@
+/*globals BasePlugin */
 /*
     LPF
     A 2nd order biquad low pass filter
@@ -23,7 +24,7 @@ var LPF = function (factory, owner) {
 
     this.addInput(inputNode);
     this.addOutput(outputNode);
-}
+};
 
 // Also update the prototype function here!
 LPF.prototype = Object.create(BasePlugin.prototype);
