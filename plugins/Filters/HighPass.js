@@ -5,14 +5,10 @@
 var HPF = function (factory, owner) {
 
     // This attaches the base plugin items to the Object
-    this.__proto__ = new BasePlugin(factory, owner);
+    BasePlugin.call(this, factory, owner);
 
     /* USER MODIFIABLE BEGIN */
     // Only modify between this line and the end of the object!
-
-    /// IMPORTANT ///
-    // Change this to the name of this object
-    this.constructor = HPF;
 
     var inputNode = this.context.createGain(),
         outputNode = this.context.createGain(),
@@ -32,6 +28,8 @@ var HPF = function (factory, owner) {
 }
 
 // Also update the prototype function here!
+HPF.prototype = Object.create(BasePlugin.prototype);
+HPF.prototype.constructor = HPF;
 HPF.prototype.name = "HPF";
 HPF.prototype.version = "1.0.0";
 HPF.prototype.uniqueID = "JSHP";

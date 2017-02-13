@@ -10,14 +10,10 @@ var SpectralWah = function (factory, owner) {
     */
 
     // This attaches the base plugin items to the Object
-    this.__proto__ = new BasePlugin(factory, owner);
+    BasePlugin.call(this, factory, owner);
 
     /* USER MODIFIABLE BEGIN */
     // Only modify between this line and the end of the object!
-
-    /// IMPORTANT ///
-    // Change this to the name of this object
-    this.constructor = SpectralWah;
 
     // The current web audio API context is available to the plugin through the this.context object
     // We are using it to create a web audio API gain node.
@@ -92,6 +88,8 @@ var SpectralWah = function (factory, owner) {
 }
 
 // Also update the prototype function here!
+SpectralWah.prototype = Object.create(BasePlugin.prototype);
+SpectralWah.prototype.constructor = SpectralWah;
 SpectralWah.prototype.name = "SpectralWah";
 SpectralWah.prototype.version = "1.0.0";
 SpectralWah.prototype.uniqueID = "JSPW";

@@ -4,14 +4,10 @@
 var AmplitudeModulation = function (factory, owner) {
 
     // This attaches the base plugin items to the Object
-    this.__proto__ = new BasePlugin(factory, owner);
+    BasePlugin.call(this, factory, owner);
 
     /* USER MODIFIABLE BEGIN */
     // Only modify between this line and the end of the object!
-
-    /// IMPORTANT ///
-    // Change this to the name of this object
-    this.constructor = AmplitudeModulation;
 
     var inputNode = this.context.createGain(),
         outputNode = this.context.createGain(),
@@ -37,6 +33,8 @@ var AmplitudeModulation = function (factory, owner) {
 }
 
 // Also update the prototype function here!
+AmplitudeModulation.prototype = Object.create(BasePlugin.prototype);
+AmplitudeModulation.prototype.constructor = AmplitudeModulation;
 AmplitudeModulation.prototype.name = "Amplitude Modulation";
 AmplitudeModulation.prototype.version = "1.0.0";
 AmplitudeModulation.prototype.uniqueID = "JSAM";

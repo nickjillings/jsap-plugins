@@ -5,14 +5,10 @@
 var LPF = function (factory, owner) {
 
     // This attaches the base plugin items to the Object
-    this.__proto__ = new BasePlugin(factory, owner);
+    BasePlugin.call(this, factory, owner);
 
     /* USER MODIFIABLE BEGIN */
     // Only modify between this line and the end of the object!
-
-    /// IMPORTANT ///
-    // Change this to the name of this object
-    this.constructor = LPF;
 
     var inputNode = this.context.createGain(),
         outputNode = this.context.createGain(),
@@ -30,6 +26,8 @@ var LPF = function (factory, owner) {
 }
 
 // Also update the prototype function here!
+LPF.prototype = Object.create(BasePlugin.prototype);
+LPF.prototype.constructor = LPF;
 LPF.prototype.name = "LPF";
 LPF.prototype.version = "1.0.0";
 LPF.prototype.uniqueID = "JSLP";
