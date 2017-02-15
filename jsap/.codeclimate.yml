@@ -1,0 +1,19 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        javascript:
+        mass_threshold: 50
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "src/*.js"
+  - "feature-worker.js"
+exclude_paths:
+- "jsap.js"
+- "js-xtract/*"
+- "templates/*"

@@ -1,50 +1,5 @@
-if (!Array.prototype.find) {
-    Array.prototype.find = function (predicate) {
-        'use strict';
-        if (this == null) {
-            throw new TypeError('Array.prototype.find called on null or undefined');
-        }
-        if (typeof predicate !== 'function') {
-            throw new TypeError('predicate must be a function');
-        }
-        var list = Object(this);
-        var length = list.length >>> 0;
-        var thisArg = arguments[1];
-        var value;
-
-        for (var i = 0; i < length; i++) {
-            value = list[i];
-            if (predicate.call(thisArg, value, i, list)) {
-                return value;
-            }
-        }
-        return undefined;
-    };
-}
-
-if (!Array.prototype.findIndex) {
-    Array.prototype.findIndex = function (predicate) {
-        'use strict';
-        if (this == null) {
-            throw new TypeError('Array.prototype.findIndex called on null or undefined');
-        }
-        if (typeof predicate !== 'function') {
-            throw new TypeError('predicate must be a function');
-        }
-        var list = Object(this);
-        var length = list.length >>> 0;
-        var thisArg = arguments[1];
-        var value;
-
-        for (var i = 0; i < length; i++) {
-            value = list[i];
-            if (predicate.call(thisArg, value, i, list)) {
-                return i;
-            }
-        }
-        return -1;
-    };
-}
+/*globals document */
+/*eslint-env browser */
 
 var LinkedStore = function (storeName) {
     // Store for the semantic terms, each store holds its own data tree
@@ -117,7 +72,7 @@ var LinkedStore = function (storeName) {
                 return storeName;
             },
             'set': function (name) {
-                if (storeName == undefined) {
+                if (storeName === undefined) {
                     name = storeName;
                 } else {
                     throw ("Name is already set");
@@ -126,7 +81,7 @@ var LinkedStore = function (storeName) {
         },
         'addTerm': {
             'value': function (term, value) {
-                if (typeof term !== "string" && term.length == 0) {
+                if (typeof term !== "string" && term.length === 0) {
                     throw ("term must be a string");
                 }
                 root[term] = value;
@@ -147,7 +102,7 @@ var LinkedStore = function (storeName) {
         },
         'deleteTerm': {
             'value': function (term) {
-                if (typeof term !== "string" && term.length == 0) {
+                if (typeof term !== "string" && term.length === 0) {
                     throw ("term must be a string");
                 }
                 root[term] = undefined;
@@ -155,7 +110,7 @@ var LinkedStore = function (storeName) {
         },
         'getTerm': {
             'value': function (term) {
-                if (typeof term !== "string" && term.length == 0) {
+                if (typeof term !== "string" && term.length === 0) {
                     throw ("term must be a string");
                 }
                 return root[term];
@@ -163,7 +118,7 @@ var LinkedStore = function (storeName) {
         },
         'hasTerm': {
             'value': function (term) {
-                if (typeof term !== "string" && term.length == 0) {
+                if (typeof term !== "string" && term.length === 0) {
                     throw ("term must be a string");
                 }
                 return root.hasOwnProperty(term);
@@ -188,4 +143,4 @@ var LinkedStore = function (storeName) {
             }
         }
     });
-}
+};
