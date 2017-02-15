@@ -4,6 +4,8 @@
         "Adaptive/SpectralWah.js",
         "Filters/LowPass.js",
         "Filters/HighPass.js",
-        "Modulation/AM.js"
+        "Modulation/AM.js",
+        "Delays/SimpleDelay.js",
+        "Delays/FeedbackDelay.js"
     ]
 }
