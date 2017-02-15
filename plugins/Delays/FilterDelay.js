@@ -51,8 +51,8 @@ var FilterDelay = function (factory, owner) {
     };
     feedbackParam.bindToAudioParam(feedback.gain);
 
-    var feedbackParam = this.parameters.createParameter("Number", "FilterFrequency", 500, 200, 1000);
-    feedbackParam.bindToAudioParam(filter.frequency);
+    var frequencyParam = this.parameters.createParameter("Number", "FilterFrequency", 500, 200, 1000);
+    frequencyParam.bindToAudioParam(filter.frequency);
 
     this.addInput(input);
     this.addOutput(output);
