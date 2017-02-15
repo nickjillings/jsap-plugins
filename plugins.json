@@ -6,6 +6,9 @@
         "Filters/HighPass.js",
         "Modulation/AM.js",
         "Delays/SimpleDelay.js",
-        "Delays/FeedbackDelay.js"
+        "Delays/FeedbackDelay.js",
+        "Delays/FilterDelay.js",
+        "Delays/StereoDelay.js",
+        "Delays/PingPongDelay.js"
     ]
 }
