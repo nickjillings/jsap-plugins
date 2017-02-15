@@ -19,10 +19,10 @@ var FilterDelay = function (factory, owner) {
     input.connect(dry);
     dry.connect(output);
     input.connect(delay);
-    delay.connect(wet);
-    delay.connect(feedback);
-    feedback.connect(filter);
-    filter.connect(delay);
+    delay.connect(filter);
+    filter.connect(wet);
+    filter.connect(feedback);
+    feedback.connect(delay);
     wet.connect(output);
 
     var delayParam = this.parameters.createParameter("Number", "Delay", 10, 10, 500);

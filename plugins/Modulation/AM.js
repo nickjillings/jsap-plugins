@@ -27,6 +27,16 @@ var AmplitudeModulation = function (factory, owner) {
     var LFO = this.parameters.createParameter("Number", "LFO", 1, 0.1, 10);
 
     LFO.bindToAudioParam(oscil.frequency);
+
+    var depth = this.parameters.createParameter("Number", "depth", 1, 0, 1);
+    depth.update = function (e) {
+        return e * 0.5;
+    };
+    depth.translate = function (e) {
+        return e * 2;
+    };
+    depth.bindToAudioParam(oscilAmp.gain);
+
     oscil.start();
 
     this.addInput(inputNode);
