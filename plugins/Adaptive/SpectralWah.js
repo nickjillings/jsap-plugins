@@ -34,7 +34,7 @@ var SpectralWah = function (factory, owner) {
         // Register the Features:
         var request = {
             "outputIndex": 0,
-            "frameSize": 8192,
+            "frameSize": 512,
             "features": [{
                 "name": "spectrum",
                 "features": [{
@@ -61,7 +61,7 @@ var SpectralWah = function (factory, owner) {
         if (!isFinite(f)) {
             return;
         }
-        var a = 0.7;
+        var a = 0.9;
         // Ensure it fits within some sensible bounds
         f = Math.min(f, 5000);
         f = Math.max(f, 100);
