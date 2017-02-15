@@ -5,10 +5,6 @@ var BlankPlugin = function (factory, owner) {
 
     /* USER MODIFIABLE BEGIN */
 
-    /// IMPORTANT ///
-    // Change this to the name of this object
-    this.constructor = BlankPlugin;
-
     // Place your code between this line...
 
     // ... and this line!
