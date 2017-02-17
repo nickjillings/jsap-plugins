@@ -63,7 +63,7 @@ var PingPongDelay = function (factory, owner) {
         wet.gain.value = g;
     };
 
-    var feedbackParam = this.parameters.createParameter("Number", "Feedback", 0, -40, 0);
+    var feedbackParam = this.parameters.createParameter("Number", "Feedback", -12, -40, 0);
     feedbackParam.translate = function (e) {
         return 20.0 * Math.log10(e);
     };
