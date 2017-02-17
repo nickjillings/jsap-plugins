@@ -1,14 +1,43 @@
 {
-    "plugins:" [
-        "gain.js",
-        "Adaptive/SpectralWah.js",
-        "Filters/LowPass.js",
-        "Filters/HighPass.js",
-        "Modulation/AM.js",
-        "Delays/SimpleDelay.js",
-        "Delays/FeedbackDelay.js",
-        "Delays/FilterDelay.js",
-        "Delays/StereoDelay.js",
-        "Delays/PingPongDelay.js"
-    ]
+    "plugins": [{
+        "url": "plugins/gain.js",
+        "type": "JavaScript",
+        "returnObject": "Gain"
+    }, {
+        "url": "plugins/Adaptive/SpectralWah.js",
+        "type": "JavaScript",
+        "returnObject": "SpectralWah"
+    }, {
+        "url": "plugins/Delays/FeedbackDelay.js",
+        "type": "JavaScript",
+        "returnObject": "FeedbackDelay"
+    }, {
+        "url": "plugins/Delays/FilterDelay.js",
+        "type": "JavaScript",
+        "returnObject": "FilterDelay"
+    }, {
+        "url": "plugins/Delays/PingPongDelay.js",
+        "type": "JavaScript",
+        "returnObject": "PingPongDelay"
+    }, {
+        "url": "plugins/Delays/SimpleDelay.js",
+        "type": "JavaScript",
+        "returnObject": "SimpleDelay"
+    }, {
+        "url": "plugins/Delays/StereoDelay.js",
+        "type": "JavaScript",
+        "returnObject": "StereoDelay"
+    }, {
+        "url": "plugins/Filters/HighPass.js",
+        "type": "JavaScript",
+        "returnObject": "HighPass"
+    }, , {
+        "url": "plugins/Filters/LowPass.js",
+        "type": "JavaScript",
+        "returnObject": "LowPass"
+    }, {
+        "url": "plugins/Modulation/AM.js",
+        "type": "JavaScript",
+        "returnObject": "AM"
+    }]
 }
