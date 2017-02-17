@@ -2,7 +2,7 @@
     "plugins": [{
         "url": "plugins/gain.js",
         "type": "JavaScript",
-        "returnObject": "Gain"
+        "returnObject": "GainPlugin"
     }, {
         "url": "plugins/Adaptive/SpectralWah.js",
         "type": "JavaScript",
@@ -30,14 +30,14 @@
     }, {
         "url": "plugins/Filters/HighPass.js",
         "type": "JavaScript",
-        "returnObject": "HighPass"
+        "returnObject": "HPF"
     }, {
         "url": "plugins/Filters/LowPass.js",
         "type": "JavaScript",
-        "returnObject": "LowPass"
+        "returnObject": "LPF"
     }, {
         "url": "plugins/Modulation/AM.js",
         "type": "JavaScript",
-        "returnObject": "AM"
+        "returnObject": "AmplitudeModulation"
     }]
 }
