@@ -18,7 +18,7 @@ var LPF = function (factory, owner) {
     inputNode.connect(filter);
     filter.connect(outputNode);
 
-    var frequency = this.parameters.createParameter("Number", "frequency", 1000, 300, 20000);
+    var frequency = this.parameters.createNumberParameter("frequency", 1000, 300, 20000);
 
     frequency.bindToAudioParam(filter.frequency);
 

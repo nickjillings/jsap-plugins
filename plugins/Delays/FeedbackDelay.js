@@ -23,7 +23,7 @@ var FeedbackDelay = function (factory, owner) {
     feedback.connect(delay);
     wet.connect(output);
 
-    var delayParam = this.parameters.createParameter("Number", "Delay", 10, 10, 500);
+    var delayParam = this.parameters.createNumberParameter("Delay", 10, 10, 500);
     delayParam.update = function (e) {
         return e / 1000.0;
     };
@@ -32,7 +32,7 @@ var FeedbackDelay = function (factory, owner) {
     };
     delayParam.bindToAudioParam(delay.delayTime);
 
-    var mixParam = this.parameters.createParameter("Number", "Dry/Wet", 50, 0, 100);
+    var mixParam = this.parameters.createNumberParameter("Dry/Wet", 50, 0, 100);
     mixParam.trigger = function () {
 
         var g = mixParam.value / 100.0;
@@ -40,7 +40,7 @@ var FeedbackDelay = function (factory, owner) {
         wet.gain.value = g;
     };
 
-    var feedbackParam = this.parameters.createParameter("Number", "Feedback", -12, -40, 0);
+    var feedbackParam = this.parameters.createNumberParameter("Feedback", -12, -40, 0);
     feedbackParam.translate = function (e) {
         return 20.0 * Math.log10(e);
     };

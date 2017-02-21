@@ -24,11 +24,11 @@ var AmplitudeModulation = function (factory, owner) {
     inputNode.connect(mixer);
     mixer.connect(outputNode);
 
-    var LFO = this.parameters.createParameter("Number", "LFO", 1, 0.1, 10);
+    var LFO = this.parameters.createNumberParameter("LFO", 1, 0.1, 10);
 
     LFO.bindToAudioParam(oscil.frequency);
 
-    var depth = this.parameters.createParameter("Number", "depth", 1, 0, 1);
+    var depth = this.parameters.createNumberParameter("depth", 1, 0, 1);
     depth.update = function (e) {
         return e * 0.5;
     };

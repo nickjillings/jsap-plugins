@@ -20,7 +20,7 @@ var SimpleDelay = function (factory, owner) {
     delay.connect(wet);
     wet.connect(output);
 
-    var delayParam = this.parameters.createParameter("Number", "Delay", 10, 10, 500);
+    var delayParam = this.parameters.createNumberParameter("Delay", 10, 10, 500);
     delayParam.update = function (e) {
         return e / 1000.0;
     };
@@ -29,7 +29,7 @@ var SimpleDelay = function (factory, owner) {
     };
     delayParam.bindToAudioParam(delay.delayTime);
 
-    var mixParam = this.parameters.createParameter("Number", "Dry/Wet", 50, 0, 100);
+    var mixParam = this.parameters.createNumberParameter("Dry/Wet", 50, 0, 100);
     mixParam.trigger = function () {
 
         var g = mixParam.value / 100.0;

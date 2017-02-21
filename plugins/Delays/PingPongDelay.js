@@ -37,7 +37,7 @@ var PingPongDelay = function (factory, owner) {
     cmerge.connect(wet);
     wet.connect(output);
 
-    var delayParam1 = this.parameters.createParameter("Number", "DelayL", 10, 10, 500);
+    var delayParam1 = this.parameters.createNumberParameter("DelayL", 10, 10, 500);
     delayParam1.update = function (e) {
         return e / 1000.0;
     };
@@ -46,7 +46,7 @@ var PingPongDelay = function (factory, owner) {
     };
     delayParam1.bindToAudioParam(delayL.delayTime);
 
-    var delayParam2 = this.parameters.createParameter("Number", "DelayR", 10, 10, 500);
+    var delayParam2 = this.parameters.createNumberParameter("DelayR", 10, 10, 500);
     delayParam2.update = function (e) {
         return e / 1000.0;
     };
@@ -55,7 +55,7 @@ var PingPongDelay = function (factory, owner) {
     };
     delayParam2.bindToAudioParam(delayR.delayTime);
 
-    var mixParam = this.parameters.createParameter("Number", "Dry/Wet", 50, 0, 100);
+    var mixParam = this.parameters.createNumberParameter("Dry/Wet", 50, 0, 100);
     mixParam.trigger = function () {
 
         var g = mixParam.value / 100.0;
@@ -63,7 +63,7 @@ var PingPongDelay = function (factory, owner) {
         wet.gain.value = g;
     };
 
-    var feedbackParam = this.parameters.createParameter("Number", "Feedback", -12, -40, 0);
+    var feedbackParam = this.parameters.createNumberParameter("Feedback", -12, -40, 0);
     feedbackParam.translate = function (e) {
         return 20.0 * Math.log10(e);
     };

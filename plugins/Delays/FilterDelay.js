@@ -25,7 +25,7 @@ var FilterDelay = function (factory, owner) {
     feedback.connect(delay);
     wet.connect(output);
 
-    var delayParam = this.parameters.createParameter("Number", "Delay", 10, 10, 500);
+    var delayParam = this.parameters.createNumberParameter("Delay", 10, 10, 500);
     delayParam.update = function (e) {
         return e / 1000.0;
     };
@@ -34,7 +34,7 @@ var FilterDelay = function (factory, owner) {
     };
     delayParam.bindToAudioParam(delay.delayTime);
 
-    var mixParam = this.parameters.createParameter("Number", "DryWet", 50, 0, 100);
+    var mixParam = this.parameters.createNumberParameter("DryWet", 50, 0, 100);
     mixParam.trigger = function () {
 
         var g = mixParam.value / 100.0;
@@ -42,7 +42,7 @@ var FilterDelay = function (factory, owner) {
         wet.gain.value = g;
     };
 
-    var feedbackParam = this.parameters.createParameter("Number", "FeedbackGain", -12, -40, 0);
+    var feedbackParam = this.parameters.createNumberParameter("FeedbackGain", -12, -40, 0);
     feedbackParam.translate = function (e) {
         return 20.0 * Math.log10(e);
     };
@@ -51,7 +51,7 @@ var FilterDelay = function (factory, owner) {
     };
     feedbackParam.bindToAudioParam(feedback.gain);
 
-    var frequencyParam = this.parameters.createParameter("Number", "FilterFrequency", 500, 200, 1000);
+    var frequencyParam = this.parameters.createNumberParameter("FilterFrequency", 500, 200, 1000);
     frequencyParam.bindToAudioParam(filter.frequency);
 
     this.addInput(input);
