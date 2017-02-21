@@ -39,5 +39,9 @@
         "url": "plugins/Modulation/AM.js",
         "type": "JavaScript",
         "returnObject": "AmplitudeModulation"
+    }, {
+        "url": "plugins/Distortion/SoftClipping.js",
+        "type": "JavaScript",
+        "returnObject": "SoftClipping"
     }]
 }
