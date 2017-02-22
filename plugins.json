@@ -43,5 +43,13 @@
         "url": "plugins/Distortion/SoftClipping.js",
         "type": "JavaScript",
         "returnObject": "SoftClipping"
+    }, {
+        "url": "plugins/Distortion/HardClipping.js",
+        "type": "JavaScript",
+        "returnObject": "HardClipping"
+    }, {
+        "url": "plugins/Distortion/ToneClipping.js",
+        "type": "JavaScript",
+        "returnObject": "ToneClipping"
     }]
 }
