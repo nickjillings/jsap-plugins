@@ -48,8 +48,8 @@
         "type": "JavaScript",
         "returnObject": "HardClipping"
     }, {
-        "url": "plugins/Distortion/ToneClipping.js",
+        "url": "plugins/Distortion/ToneControl.js",
         "type": "JavaScript",
-        "returnObject": "ToneClipping"
+        "returnObject": "ToneControl"
     }]
 }
