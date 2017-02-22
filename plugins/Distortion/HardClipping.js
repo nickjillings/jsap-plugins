@@ -1,5 +1,5 @@
 /*globals BasePlugin */
-var SoftClipping = function (factory, owner) {
+var HardClipping = function (factory, owner) {
     // This attaches the base plugin items to the Object
     BasePlugin.call(this, factory, owner);
 
@@ -15,29 +15,35 @@ var SoftClipping = function (factory, owner) {
     this.addInput(drive);
     this.addOutput(output);
 
-    this.onloaded = function () {
-        if (waveshaper.curve) {
-            return;
-        }
+    this.onloaded = function () {};
+
+    function calculateWaveform() {
         var N = 1025,
-            curve = new Float32Array(N);
-        for (var n = 0; n < N; n++) {
-            var k = (n - 1024) / 1024;
-            curve[n] = Math.cos(k * Math.PI);
+            curve = new Float32Array(N),
+            T = threshParam.value,
+            n;
+        for (n = 0; n < N; n++) {
+            var K = (N - 1) / 2;
+            var k = (n - K) / K;
+            if (Math.abs(k) >= T) {
+                if (k < 0) {
+                    curve[n] = -T;
+                } else {
+                    curve[n] = T;
+                }
+            } else {
+                curve[n] = k;
+            }
         }
         waveshaper.curve = curve;
         waveshaper.oversample = "4x";
-    };
+    }
 
 
-    var driveParam = this.parameters.createNumberParameter("Drive", 0, -6, 24);
-    driveParam.update = function (v) {
-        return Math.pow(10, v / 20.0);
+    var threshParam = this.parameters.createNumberParameter("Thresh", 1, 0, 1);
+    threshParam.trigger = function () {
+        calculateWaveform();
     };
-    driveParam.translate = function (v) {
-        return 20.0 * Math.log10(v);
-    };
-    driveParam.bindToAudioParam(drive.gain);
     var outputParam = this.parameters.createNumberParameter("Output", 0, -24, 24);
     outputParam.update = function (v) {
         return Math.pow(10, v / 20.0);
@@ -61,8 +67,8 @@ var SoftClipping = function (factory, owner) {
 };
 
 // Also update the prototype function here!
-SoftClipping.prototype = Object.create(BasePlugin.prototype);
-SoftClipping.prototype.constructor = SoftClipping;
-SoftClipping.prototype.name = "Soft Clipping";
-SoftClipping.prototype.version = "1.0.0";
-SoftClipping.prototype.uniqueID = "JSSC";
+HardClipping.prototype = Object.create(BasePlugin.prototype);
+HardClipping.prototype.constructor = HardClipping;
+HardClipping.prototype.name = "Hard Clipping";
+HardClipping.prototype.version = "1.0.0";
+HardClipping.prototype.uniqueID = "JSHC";
