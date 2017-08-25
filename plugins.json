@@ -36,6 +36,14 @@
         "type": "JavaScript",
         "returnObject": "LPF"
     }, {
+        "url": "plugins/Filters/peaking.js",
+        "type": "JavaScript",
+        "returnObject": "PeakingFilter"
+    }, {
+        "url": "plugins/Filters/Graphical.js",
+        "type": "JavaScript",
+        "returnObject": "GraphicalEQ"
+    }, {
         "url": "plugins/Modulation/AM.js",
         "type": "JavaScript",
         "returnObject": "AmplitudeModulation"
