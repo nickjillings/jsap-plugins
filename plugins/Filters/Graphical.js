@@ -20,9 +20,10 @@ var GraphicalEQ = function (factory, owner) {
 
     // Create a bunch of filter nodes
     var filters = [],
-        N = 10;
+        N = 10,
+        i;
 
-    for (var i = 0; i < N; i++) {
+    for (i = 0; i < N; i++) {
         filters[i] = new PeakingFilter(factory, this);
         var f = 20.0 * Math.pow(2, i);
         filters[i].parameters.parameters.frequency.value = f;
@@ -31,7 +32,7 @@ var GraphicalEQ = function (factory, owner) {
         g.bindToAudioParam(filters[i].parameters.parameters.gain);
     }
 
-    for (var i = 0; i < N - 1; i++) {
+    for (i = 0; i < N - 1; i++) {
         filters[i].getOutputs()[0].connect(filters[i + 1].getInputs()[0]);
     }
     input.connect(filters[0].getInputs()[0]);
@@ -55,4 +56,4 @@ GraphicalEQ.prototype.resources = [{
     'test': function () {
         return typeof PeakingFilter === "function";
     }
-}]
+}];
