@@ -26,11 +26,14 @@ var Compressor = function (factory, owner) {
     
     // Create the parameters
     var inputGainParam = this.parameters.createNumberParameter("Input gain", 0, -20, 20), 
-        ratioParam = this.parameters.createNumberParameter("Ratio", 2, 1, 20), 
-        thresholdParam = this.parameters.createNumberParameter("Thresh", 0, -50, 0), 
+        attackParam = this.parameters.createNumberParameter("Attack", 0.3, 0, 1), 
+        releaseParam = this.parameters.createNumberParameter("Release", 0.25, 0, 1),
+        ratioParam = this.parameters.createNumberParameter("Ratio", 2, 1, 30),
+        thresholdParam = this.parameters.createNumberParameter("Thresh", 0, -50, 0),
+        kneeParam = this.parameters.createNumberParameter("Knee", 0, 0, 40),
         makeUpGainParam = this.parameters.createNumberParameter("Make Up Gain", 0, -20, 20);
     
-    // Attaching some number conversions on the parameter to shift between dB and linear gains    
+    // convert between dB and lin for I/O gains
     function linTodB(e) {
         return 20.0 * Math.log10(e);
     } 
@@ -44,8 +47,11 @@ var Compressor = function (factory, owner) {
         
     // Bind the parameters to the web audio node params
     inputGainParam.bindToAudioParam(inputGain.gain);
+    attackParam.bindToAudioParam(compressor.attack);
+    releaseParam.bindToAudioParam(compressor.release);
     ratioParam.bindToAudioParam(compressor.ratio);
     thresholdParam.bindToAudioParam(compressor.threshold);
+    kneeParam.bindToAudioParam(compressor.knee);
     makeUpGainParam.bindToAudioParam(makeUpGain.gain);    
     
 };
