@@ -22,7 +22,7 @@ var GainPlugin = function (factory, owner) {
     var node = this.context.createGain();
 
     // This defines a new parameter. The arguments passed are, in order:
-    // Data Type, Name, Default value, minimum and maximum values
+    // Name, Default value, minimum and maximum values
     // Parameters are exposed by default
     var gain_parameter = this.parameters.createNumberParameter("gain", 0, -12, 12);
 
