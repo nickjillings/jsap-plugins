@@ -20,7 +20,7 @@ var PhaseInvert = function (factory, owner) {
         } else {
             node.gain.value = 1.0;
         }
-    }
+    };
 
     // Set the gain node as the input point. All connections to the plugin are made
     // to this node.
