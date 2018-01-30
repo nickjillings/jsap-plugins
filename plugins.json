@@ -4,6 +4,10 @@
         "type": "JavaScript",
         "returnObject": "GainPlugin"
     }, {
+        "url": "plugins/phaseInvert.js",
+        "type": "JavaScript",
+        "returnObject": "PhaseInvert"
+    }, {
         "url": "plugins/Adaptive/SpectralWah.js",
         "type": "JavaScript",
         "returnObject": "SpectralWah"
