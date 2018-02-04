@@ -67,5 +67,9 @@
         "url": "plugins/Dynamics/Compressor.js",
         "type": "JavaScript",
         "returnObject": "Compressor"
+    }, {
+        "url": "plugins/Dynamics/MultibandCompressor.js",
+        "type": "JavaScript",
+        "returnObject": "MultibandCompressor"
     }]
 }
