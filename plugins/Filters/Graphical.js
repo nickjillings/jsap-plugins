@@ -51,7 +51,7 @@ GraphicalEQ.prototype.name = "GraphicalEQ";
 GraphicalEQ.prototype.version = "0.0.0";
 GraphicalEQ.prototype.uniqueID = "GREQ";
 GraphicalEQ.prototype.resources = [{
-    'url': "./peaking.js",
+    'url': "plugins/Filters/peaking.js",
     'type': "javascript",
     'test': function () {
         return typeof PeakingFilter === "function";
