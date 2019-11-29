@@ -1,9 +1,9 @@
 # JSAP Plugins
-Status: [![Build Status](https://travis-ci.org/nickjillings/jsap-plugins.svg?branch=master)](https://travis-ci.org/nickjillings/jsap-plugins)
+
 
 This is a collection of JSAP compatible plugins. The full JSAP library and standard can be obtained from the [repository](https://github.com/nickjillings/JSAP)
 
-JSAP Status: [![Build Status](https://travis-ci.org/nickjillings/JSAP.svg?branch=master)](https://travis-ci.org/nickjillings/JSAP)
+A plugin test bed can found [here](http://dmtlab.bcu.ac.uk/nickjillings/webaudioexamples/jsap/dev/dnd-plugin.html).
 
 ## Contributing
 We encourage you to submit your own plugins to this repository, please do so by forking and submitting a pull request. When doing the pull request, ensure your plugin meets the following criteria:

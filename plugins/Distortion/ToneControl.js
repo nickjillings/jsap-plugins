@@ -34,7 +34,7 @@
         function calculateWaveform() {
             var N = 1025,
                 curve = new Float32Array(N),
-                T = threshParam.value,
+                T = threshParam.value/100,
                 n;
             for (n = 0; n < N; n++) {
                 var K = (N - 1) / 2;
@@ -54,7 +54,7 @@
         }
 
 
-        var threshParam = this.parameters.createNumberParameter("Thresh", 1, 0, 1);
+        var threshParam = this.parameters.createNumberParameter("Thresh", 100, 0, 100);
         threshParam.trigger = function () {
             calculateWaveform();
         };
