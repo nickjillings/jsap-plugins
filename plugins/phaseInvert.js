@@ -44,7 +44,7 @@
     };
 
     // Also update the prototype function here!
-    PhaseInvert.prototype = Object.create(BasePlugin.prototype);
+    PhaseInvert.prototype = Object.create(JSAP.BasePlugin.prototype);
     PhaseInvert.prototype.constructor = PhaseInvert;
     PhaseInvert.prototype.name = "PhaseInvert";
     PhaseInvert.prototype.version = "1.0.0";

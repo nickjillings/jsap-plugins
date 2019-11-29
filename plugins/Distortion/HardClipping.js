@@ -79,7 +79,7 @@
     };
 
     // Also update the prototype function here!
-    HardClipping.prototype = Object.create(BasePlugin.prototype);
+    HardClipping.prototype = Object.create(JSAP.BasePlugin.prototype);
     HardClipping.prototype.constructor = HardClipping;
     HardClipping.prototype.name = "Hard Clipping";
     HardClipping.prototype.version = "1.0.0";

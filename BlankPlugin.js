@@ -32,7 +32,7 @@
     };
 
     // Also update the prototype function here!
-    BlankPlugin.prototype = Object.create(BasePlugin.prototype);
+    BlankPlugin.prototype = Object.create(JSAP.BasePlugin.prototype);
     BlankPlugin.prototype.constructor = BlankPlugin;
     BlankPlugin.prototype.name = "BlankPlugin";
     BlankPlugin.prototype.version = "0.0.0";

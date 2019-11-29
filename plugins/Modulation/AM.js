@@ -56,7 +56,7 @@
     };
 
     // Also update the prototype function here!
-    AmplitudeModulation.prototype = Object.create(BasePlugin.prototype);
+    AmplitudeModulation.prototype = Object.create(JSAP.BasePlugin.prototype);
     AmplitudeModulation.prototype.constructor = AmplitudeModulation;
     AmplitudeModulation.prototype.name = "Amplitude Modulation";
     AmplitudeModulation.prototype.version = "1.0.0";

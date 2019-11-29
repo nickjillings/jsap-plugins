@@ -68,7 +68,7 @@
     };
 
     // Also update the prototype function here!
-    Compressor.prototype = Object.create(BasePlugin.prototype);
+    Compressor.prototype = Object.create(JSAP.BasePlugin.prototype);
     Compressor.prototype.constructor = Compressor;
     Compressor.prototype.name = "Compressor";
     Compressor.prototype.version = "1.0.0";

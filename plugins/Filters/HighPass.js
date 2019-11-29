@@ -41,7 +41,7 @@
     };
 
     // Also update the prototype function here!
-    HPF.prototype = Object.create(BasePlugin.prototype);
+    HPF.prototype = Object.create(JSAP.BasePlugin.prototype);
     HPF.prototype.constructor = HPF;
     HPF.prototype.name = "HPF";
     HPF.prototype.version = "1.0.0";

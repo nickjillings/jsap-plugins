@@ -106,7 +106,7 @@
     };
 
     // Also update the prototype function here!
-    MultibandCompressor.prototype = Object.create(BasePlugin.prototype);
+    MultibandCompressor.prototype = Object.create(JSAP.BasePlugin.prototype);
     MultibandCompressor.prototype.constructor = MultibandCompressor;
     MultibandCompressor.prototype.name = "MultibandCompressor";
     MultibandCompressor.prototype.version = "0.0.1";

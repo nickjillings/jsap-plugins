@@ -65,7 +65,7 @@
     };
 
     // Also update the prototype function here!
-    SimpleDelay.prototype = Object.create(BasePlugin.prototype);
+    SimpleDelay.prototype = Object.create(JSAP.BasePlugin.prototype);
     SimpleDelay.prototype.constructor = SimpleDelay;
     SimpleDelay.prototype.name = "SimpleDelay";
     SimpleDelay.prototype.version = "1.0.0";

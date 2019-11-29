@@ -39,7 +39,7 @@
     };
 
     // Also update the prototype function here!
-    LPF.prototype = Object.create(BasePlugin.prototype);
+    LPF.prototype = Object.create(JSAP.BasePlugin.prototype);
     LPF.prototype.constructor = LPF;
     LPF.prototype.name = "LPF";
     LPF.prototype.version = "1.0.0";

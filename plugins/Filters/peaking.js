@@ -45,7 +45,7 @@
     };
 
     // Also update the prototype function here!
-    PeakingFilter.prototype = Object.create(BasePlugin.prototype);
+    PeakingFilter.prototype = Object.create(JSAP.BasePlugin.prototype);
     PeakingFilter.prototype.constructor = PeakingFilter;
     PeakingFilter.prototype.name = "PeakingFilter";
     PeakingFilter.prototype.version = "1.0.0";

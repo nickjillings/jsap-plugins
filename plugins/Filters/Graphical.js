@@ -57,7 +57,7 @@
     };
 
     // Also update the prototype function here!
-    GraphicalEQ.prototype = Object.create(BasePlugin.prototype);
+    GraphicalEQ.prototype = Object.create(JSAP.BasePlugin.prototype);
     GraphicalEQ.prototype.constructor = GraphicalEQ;
     GraphicalEQ.prototype.name = "GraphicalEQ";
     GraphicalEQ.prototype.version = "0.0.0";

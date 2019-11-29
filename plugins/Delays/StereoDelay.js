@@ -82,7 +82,7 @@
     };
 
     // Also update the prototype function here!
-    StereoDelay.prototype = Object.create(BasePlugin.prototype);
+    StereoDelay.prototype = Object.create(JSAP.BasePlugin.prototype);
     StereoDelay.prototype.constructor = StereoDelay;
     StereoDelay.prototype.name = "StereoDelay";
     StereoDelay.prototype.version = "1.0.0";

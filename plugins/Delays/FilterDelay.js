@@ -82,7 +82,7 @@
     };
 
     // Also update the prototype function here!
-    FilterDelay.prototype = Object.create(BasePlugin.prototype);
+    FilterDelay.prototype = Object.create(JSAP.BasePlugin.prototype);
     FilterDelay.prototype.constructor = FilterDelay;
     FilterDelay.prototype.name = "FilterDelay";
     FilterDelay.prototype.version = "1.0.0";

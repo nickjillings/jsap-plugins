@@ -73,7 +73,7 @@
     };
 
     // Also update the prototype function here!
-    SoftClipping.prototype = Object.create(BasePlugin.prototype);
+    SoftClipping.prototype = Object.create(JSAP.BasePlugin.prototype);
     SoftClipping.prototype.constructor = SoftClipping;
     SoftClipping.prototype.name = "Soft Clipping";
     SoftClipping.prototype.version = "1.0.0";

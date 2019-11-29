@@ -83,7 +83,7 @@
     };
 
     // Also update the prototype function here!
-    ToneControl.prototype = Object.create(BasePlugin.prototype);
+    ToneControl.prototype = Object.create(JSAP.BasePlugin.prototype);
     ToneControl.prototype.constructor = ToneControl;
     ToneControl.prototype.name = "Tone Clipping";
     ToneControl.prototype.version = "1.0.0";

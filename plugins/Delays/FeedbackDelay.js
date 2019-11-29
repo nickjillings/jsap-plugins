@@ -77,7 +77,7 @@
     };
 
     // Also update the prototype function here!
-    FeedbackDelay.prototype = Object.create(BasePlugin.prototype);
+    FeedbackDelay.prototype = Object.create(JSAP.BasePlugin.prototype);
     FeedbackDelay.prototype.constructor = FeedbackDelay;
     FeedbackDelay.prototype.name = "FeedbackDelay";
     FeedbackDelay.prototype.version = "1.0.0";

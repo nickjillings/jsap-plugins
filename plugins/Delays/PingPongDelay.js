@@ -103,7 +103,7 @@
     };
 
     // Also update the prototype function here!
-    PingPongDelay.prototype = Object.create(BasePlugin.prototype);
+    PingPongDelay.prototype = Object.create(JSAP.BasePlugin.prototype);
     PingPongDelay.prototype.constructor = PingPongDelay;
     PingPongDelay.prototype.name = "PingPongDelay";
     PingPongDelay.prototype.version = "1.0.0";

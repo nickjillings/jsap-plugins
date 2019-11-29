@@ -100,7 +100,7 @@
     };
 
     // Also update the prototype function here!
-    SpectralWah.prototype = Object.create(BasePlugin.prototype);
+    SpectralWah.prototype = Object.create(JSAP.BasePlugin.prototype);
     SpectralWah.prototype.constructor = SpectralWah;
     SpectralWah.prototype.name = "SpectralWah";
     SpectralWah.prototype.version = "1.0.0";
