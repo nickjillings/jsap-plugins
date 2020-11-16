@@ -8,7 +8,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.ToneControl = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var ToneControl = function (factory, owner) {

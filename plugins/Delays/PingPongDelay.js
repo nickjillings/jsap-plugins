@@ -8,7 +8,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.PingPongDelay = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var PingPongDelay = function (factory, owner) {

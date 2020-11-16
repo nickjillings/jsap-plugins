@@ -11,7 +11,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.AmplitudeModulation = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var AmplitudeModulation = function (factory, owner) {

@@ -8,7 +8,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.PhaseInvert = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var PhaseInvert = function (factory, owner) {

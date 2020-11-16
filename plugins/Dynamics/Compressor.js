@@ -8,7 +8,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.Compressor = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var Compressor = function (factory, owner) {

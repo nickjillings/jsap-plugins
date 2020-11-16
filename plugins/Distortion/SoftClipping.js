@@ -8,7 +8,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.SoftClipping = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var SoftClipping = function (factory, owner) {

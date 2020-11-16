@@ -8,7 +8,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.FeedbackDelay = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var FeedbackDelay = function (factory, owner) {

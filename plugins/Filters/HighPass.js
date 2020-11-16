@@ -12,7 +12,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.HPF = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var HPF = function (factory, owner) {

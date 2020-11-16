@@ -12,7 +12,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.PeakingFilter = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var PeakingFilter = function (factory, owner) {

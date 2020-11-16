@@ -12,7 +12,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.SpectralWah = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var SpectralWah = function (factory, owner) {

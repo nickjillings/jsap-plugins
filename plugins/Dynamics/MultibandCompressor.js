@@ -11,7 +11,7 @@
         if (root === undefined) {
             root = window;
         }
-        root.GainPlugin = loader(root.JSAP);
+        root.MultibandCompressor = loader(root.JSAP);
     }
 })(this, function(JSAP) {
     var MultibandCompressor = function (factory, owner) {
